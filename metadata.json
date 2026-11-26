@@ -1,0 +1,6 @@
+{
+  "name": "PC MASTERPIECE",
+  "description": "BUILD YOUR LEGEND — Interactive 3D custom PC hardware showcase featuring scroll-driven assembly, component exploration, exploded view, RGB lighting studio, and five signature builds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

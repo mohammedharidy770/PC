@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-primary: #07090d;
+    --bg-secondary: #10141b;
+    --bg-card: #151a22;
+    --text-primary: #f5f6f8;
+    --text-secondary: #929ba8;
+    --accent: #c5a5ff;
+    --border-subtle: rgba(255, 255, 255, 0.1);
+  }
+
+  html {
+    background-color: #07090d;
+    color: #f5f6f8;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: auto;
+  }
+
+  body {
+    background-color: #07090d;
+    color: #f5f6f8;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Outfit", sans-serif;
+    text-wrap: balance;
+  }
+
+  .font-mono-tech {
+    font-family: "JetBrains Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom hairline scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(197, 165, 255, 0.45);
+}
+
+/* Custom range input styling for RGB Studio and Exploded Slider */
+input[type="range"].pc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type="range"].pc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #c5a5ff;
+  border: 2px solid #07090d;
+  cursor: pointer;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].pc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
