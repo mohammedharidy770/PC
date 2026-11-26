@@ -36,7 +36,7 @@ export default function App() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <LoadingScreen progress={loadProgress} ready={previewsReady} />
       <CustomCursor />
       <Navbar />
